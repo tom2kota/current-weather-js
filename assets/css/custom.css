@@ -1,0 +1,22 @@
+/*Using classes from: https://semantic-ui.com/collections/message.html */
+
+body {
+    background-color: #DADADA;
+}
+
+body > .grid {
+    height: 100%;
+}
+
+.image {
+    margin-top: -100px;
+}
+
+.column {
+    max-width: 440px;
+}
+
+#weatherBanner {
+    /*display: none;*/
+    background-color: #f3f7fb;
+}
