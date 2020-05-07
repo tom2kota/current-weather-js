@@ -2,31 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Weather Now - JS App</title>
+    <!--    <link rel="stylesheet" type="text/css" href="./assets/css/semantic.css"/>-->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/custom.css">
+
 </head>
 <body>
-<div>
-    <h1>Weather NOW!</h1>
-    <div class="input-field">
-        <div id="weatherSearch">
-            <label for="weatherCountry">Enter your city</label>
-            <input id="weatherCountry" autocomplete="off" type="text">
-            <button id="weatherSearchButton" type="button">Search</button>
+
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <div class="ui raised very padded text segment">
+
+
+            <h1 class="ui teal image header">
+                <img src="./assets/images/atmospheric.svg" class="image" alt="atmospheric svg"/>
+                <span class="content">
+                    Weather NOW!
+                </span>
+            </h1>
+
+
+            <div class="ui segment">
+                <form id="weatherSearch" class="ui large form" onsubmit="return false">
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="sistrix icon"></i>
+                            <label for="weatherCountry">
+                            </label>
+                            <input id="weatherCountry"
+                                   type="text"
+                                   name="city"
+                                   placeholder="Enter your city"
+                                   required
+                                   autocomplete="off"
+                            >
+                        </div>
+                    </div>
+
+                    <div type="submit"
+                         id="weatherSearchButton"
+                         class="ui fluid large teal submit button">
+                        Search
+                    </div>
+
+                </form>
+            </div>
+
+            <div>
+                <p id="countryError"></p>
+            </div>
+
+
+            <div class="ui segment">
+                <div  class="ui center aligned teal segment">
+                    <i id="countryFlag"></i>
+                    <span id="countryCode"><i class="flag outline icon"></i>Country Code</span>
+                </div>
+                <div id="countryName" class="ui center aligned teal segment">
+                    <i class="building outline icon"></i>
+                    <span>City</span>
+                </div>
+                <div id="countryTemperature" class="ui center aligned teal segment">
+                    <i class="thermometer half icon"></i>
+                    <span>Temperature</span>
+                </div>
+                <div id="countryWeather" class="ui center aligned teal segment">
+                    <i class="umbrella icon"></i>
+                    <span>Weather</span>
+                </div>
+            </div>
+
+
+            <div id="weatherBanner" class="ui segment image">
+                <img src="./assets/images/weather-icon-gif-13.jpg"
+                     alt="icon-library.net//images/weather-icon-gif/weather-icon-gif-13.jpg"/>
+            </div>
+
         </div>
     </div>
-    <div class="output-field">
-        <h2>Your country</h2>
-        <p>output data:</p>
-        <ul>
-            <li id="countryName">&#9918;</li>
-            <li id="countryTemperature">&#9918;</li>
-            <li id="countryWeather">&#9918;</li>
-        </ul>
-    </div>
-    <div class="error-field">
-        <h3 id="countryError"></h3>
-    </div>
 </div>
-<script src="main.js"></script>
+
+
+<script src="./assets/js/main.js"></script>
 </body>
 </html>
