@@ -43,7 +43,7 @@ const searchCountry = () => {
     let WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${WEATHER_CITY}&units=metric&appid=${APP_KEY}`;
     // console.log(WEATHER_CITY);
     // regex test: https://regexr.com/
-    let passRegex = WEATHER_CITY.search(/^[a-zа-я-\s]+$/gi);
+    let passRegex = WEATHER_CITY.search(/^[a-zа-я-\s]{3,40}$/gi);
     (passRegex) ? printError() : searchWeather(WEATHER_API_URL);
 }
 
