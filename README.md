@@ -1,7 +1,7 @@
-# current-weather-js
+# weather-now-js
 Current Weather Data - JS App (using Weather API: https://openweathermap.org/api)
 
-[DEMO](https://tom2kota.github.io/current-weather-js/)
+[DEMO](https://tom2kota.github.io/weather-now-js/)
 
 --------
 
