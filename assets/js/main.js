@@ -42,7 +42,8 @@ const searchCountry = () => {
     let WEATHER_CITY = document.querySelector('#weatherCountry').value.trim();
     let WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${WEATHER_CITY}&units=metric&appid=${APP_KEY}`;
     // console.log(WEATHER_CITY);
-    let passRegex = WEATHER_CITY.search(/^[a-z\s]+$/gi);
+    // regex test: https://regexr.com/
+    let passRegex = WEATHER_CITY.search(/^[a-zа-я-\s]+$/gi);
     (passRegex) ? printError() : searchWeather(WEATHER_API_URL);
 }
 
